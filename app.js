@@ -13,8 +13,8 @@ var userSession = require('./routes/session');
 
 var app = express();
 
-//var databaseUrl = 'mongodb://localhost:27017/best-for-you-organics';
-var databaseUrl = 'mongodb://lab-cosmosdbv1:KgdCGb8ehZ7GcVg7OfWONm3Oq2vOWQf0xSyBEJuGLePzj3YoBkI3BqYilABSKX7lYkL7zGwu8vxTa2bUT14LYg==@lab-cosmosdbv1.documents.azure.com:10255/best-for-you-organics?ssl=true&replicaSet=globaldb';
+var databaseUrl = process.env.MONGODB_URI || 'mongodb://localhost:27017/best-for-you-organics';
+//var databaseUrl = 'mongodb://lab-cosmosdbv1:KgdCGb8ehZ7GcVg7OfWONm3Oq2vOWQf0xSyBEJuGLePzj3YoBkI3BqYilABSKX7lYkL7zGwu8vxTa2bUT14LYg==@lab-cosmosdbv1.documents.azure.com:10255/best-for-you-organics?ssl=true&replicaSet=globaldb';
 
 
 var mongoose = require('mongoose');
